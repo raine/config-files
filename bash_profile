@@ -4,6 +4,7 @@ export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home"
 export PATH=/opt/local/bin:/opt/local/sbin:/Users/rane/.gem/ruby/1.8/bin:$PATH
 
 # Finished adapting your PATH environment variable for use with MacPorts.
+# test
 
 alias gdc='git diff --cached'
 alias gst='git status'
