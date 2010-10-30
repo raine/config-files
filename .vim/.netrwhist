@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/rane'
+let g:netrw_dirhist_2='/Users'
+let g:netrw_dirhist_3='/'
+let g:netrw_dirhist_4='/Users/rane/git/hourflow'
+let g:netrw_dirhist_5='/Volumes/Home Directory/rbot'
