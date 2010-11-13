@@ -36,6 +36,11 @@ set nowrap
 set cursorline
 set autowrite
 set visualbell
+set cpt=.,w,b,u
+set completeopt=
+" set foldmethod=syntax
+
+set wildignore+=*.class
 
 map <D-r> :!ruby %<CR>
 map! <D-r> :!ruby %<CR>
@@ -63,7 +68,16 @@ map! <D-9> <C-O>:tabn 9<CR>
 nmap <leader>bc :Bclose<CR>
 nmap <leader>bc! :Bclose!<CR>
 
-map <leader>a :Ack 
+map <leader>a :Ack ''<Left>
+
+inoremap "" ""<Esc>i
+inoremap '' ''<Esc>i
+inoremap <> <><Esc>i
+
+inoremap () ()<Esc>i
+inoremap {} {}<Esc>i
+inoremap [] []<Esc>i
+
 
 set guifont=Inconsolata:h12
 "set guifont=:h13
@@ -86,7 +100,16 @@ command! -bar -nargs=0 SudoW :silent exe “write !sudo tee % >/dev/null” | si
 let NERDSpaceDelims = "2"
 let NERDDefaultNesting = "0"
 
-let g:CommandTMaxHeight= "30"
+let g:CommandTMaxHeight = "30"
+let g:CommandTMatchWindowAtTop = "1"
+
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplorerMoreThanOne = 1
+
+let g:ackprg="ack\\ -H\\ -i\\ --nocolor\\ --nogroup"
+
+map <F2> <Esc>:1,$!xmllint --format -<CR> 
 
 source ~/.vimrc.local
 
